@@ -2,6 +2,15 @@
 
 import { FaClock, FaClipboardList, FaShieldAlt } from 'react-icons/fa';
 
+const handleEmailCopy = async () => {
+  try {
+    await navigator.clipboard.writeText('Joel.Adrian6174@gmail.com');
+    alert('The email has been copied to the clipboard');
+  } catch (err) {
+    alert('Failed to copy email');
+  }
+};
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-blue-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 text-slate-900 dark:text-slate-50">
@@ -312,7 +321,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
             {/* Email Card */}
-            <a href="mailto:Joel.Adrian6174@gmail.com" className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 dark:from-slate-800 dark:to-slate-900 p-1 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <button onClick={handleEmailCopy} className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 dark:from-slate-800 dark:to-slate-900 p-1 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 cursor-pointer border-none">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-400 to-cyan-400 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-300 -z-10"></div>
               <div className="relative rounded-2xl bg-gradient-to-br from-blue-50/95 to-blue-100/95 dark:from-slate-800/95 dark:to-slate-900/95 backdrop-blur-md p-8 h-full flex flex-col items-center justify-center text-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400/0 to-cyan-400/0 group-hover:from-blue-400/5 group-hover:to-cyan-400/5 rounded-2xl transition-all duration-300"></div>
@@ -320,10 +329,10 @@ export default function Home() {
                 <h3 className="text-lg font-bold mb-2 text-slate-900 dark:text-white">Email</h3>
                 <p className="text-sm text-slate-600 dark:text-slate-300 break-all font-medium">Joel.Adrian6174@gmail.com</p>
               </div>
-            </a>
+            </button>
 
             {/* LinkedIn Card */}
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 dark:from-slate-800 dark:to-slate-900 p-1 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <a href="https://www.linkedin.com/in/adrian-joel-jaspa-416a711b6/" target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-blue-50 to-blue-100 dark:from-slate-800 dark:to-slate-900 p-1 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
               <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 to-blue-600 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-300 -z-10"></div>
               <div className="relative rounded-2xl bg-gradient-to-br from-blue-50/95 to-blue-100/95 dark:from-slate-800/95 dark:to-slate-900/95 backdrop-blur-md p-8 h-full flex flex-col items-center justify-center text-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-400/0 to-blue-400/0 group-hover:from-blue-400/5 group-hover:to-blue-400/5 rounded-2xl transition-all duration-300"></div>
@@ -334,7 +343,7 @@ export default function Home() {
             </a>
 
             {/* GitHub Card */}
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800 p-1 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <a href="https://github.com/Aries6174" target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-100 to-slate-200 dark:from-slate-700 dark:to-slate-800 p-1 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
               <div className="absolute -inset-1 bg-gradient-to-r from-slate-500 to-slate-700 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-300 -z-10"></div>
               <div className="relative rounded-2xl bg-gradient-to-br from-slate-50/95 to-slate-100/95 dark:from-slate-700/95 dark:to-slate-800/95 backdrop-blur-md p-8 h-full flex flex-col items-center justify-center text-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-slate-400/0 to-slate-400/0 group-hover:from-slate-400/5 group-hover:to-slate-400/5 rounded-2xl transition-all duration-300"></div>
@@ -345,7 +354,7 @@ export default function Home() {
             </a>
 
             {/* LeetCode Card */}
-            <a href="https://leetcode.com" target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-amber-50 to-yellow-100 dark:from-slate-800 dark:to-slate-900 p-1 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <a href="https://leetcode.com/u/Aries6174/" target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-amber-50 to-yellow-100 dark:from-slate-800 dark:to-slate-900 p-1 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
               <div className="absolute -inset-1 bg-gradient-to-r from-amber-400 to-yellow-500 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-300 -z-10"></div>
               <div className="relative rounded-2xl bg-gradient-to-br from-amber-50/95 to-yellow-100/95 dark:from-slate-800/95 dark:to-slate-900/95 backdrop-blur-md p-8 h-full flex flex-col items-center justify-center text-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-amber-400/0 to-yellow-400/0 group-hover:from-amber-400/5 group-hover:to-yellow-400/5 rounded-2xl transition-all duration-300"></div>
@@ -356,7 +365,7 @@ export default function Home() {
             </a>
 
             {/* Facebook Card */}
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-50 to-purple-100 dark:from-slate-800 dark:to-slate-900 p-1 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+            <a href="https://www.facebook.com/adrianjoel.jaspa/" target="_blank" rel="noopener noreferrer" className="group relative overflow-hidden rounded-2xl bg-gradient-to-br from-indigo-50 to-purple-100 dark:from-slate-800 dark:to-slate-900 p-1 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
               <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-2xl opacity-0 group-hover:opacity-100 blur transition-opacity duration-300 -z-10"></div>
               <div className="relative rounded-2xl bg-gradient-to-br from-indigo-50/95 to-purple-100/95 dark:from-slate-800/95 dark:to-slate-900/95 backdrop-blur-md p-8 h-full flex flex-col items-center justify-center text-center">
                 <div className="absolute inset-0 bg-gradient-to-br from-indigo-400/0 to-purple-400/0 group-hover:from-indigo-400/5 group-hover:to-purple-400/5 rounded-2xl transition-all duration-300"></div>
