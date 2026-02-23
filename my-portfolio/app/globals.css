@@ -19,8 +19,161 @@
   }
 }
 
+html {
+  background: var(--background);
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Animated background elements */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background: 
+    radial-gradient(ellipse 1200px 800px at 20% 10%, rgba(59, 130, 246, 0.2) 0%, transparent 40%),
+    radial-gradient(ellipse 800px 600px at 80% 20%, rgba(34, 211, 238, 0.15) 0%, transparent 45%),
+    radial-gradient(ellipse 1000px 700px at 30% 70%, rgba(139, 92, 246, 0.12) 0%, transparent 50%),
+    radial-gradient(ellipse 900px 600px at 90% 60%, rgba(59, 130, 246, 0.1) 0%, transparent 45%);
+  background-attachment: fixed;
+  animation: gradientFlow 25s ease-in-out infinite;
+  z-index: 0;
+}
+
+/* Subtle animated grid pattern */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(rgba(59, 130, 246, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(59, 130, 246, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  background-attachment: fixed;
+  z-index: 1;
+  opacity: 0.5;
+  animation: gridShift 30s linear infinite;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Smoothing transitions globally */
+* {
+  @apply transition-all duration-300;
+}
+
+/* Utility: smoother max-width for main containers */
+.container {
+  max-width: 80rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Animations */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes gradientDrift {
+  0% {
+    background-position: 0% 0%;
+  }
+  25% {
+    background-position: 5% 5%;
+  }
+  50% {
+    background-position: 3% 2%;
+  }
+  75% {
+    background-position: -2% -3%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+@keyframes gradientFlow {
+  0% {
+    filter: brightness(1);
+    opacity: 1;
+  }
+  25% {
+    filter: brightness(1.05);
+  }
+  50% {
+    filter: brightness(1);
+  }
+  75% {
+    filter: brightness(1.02);
+  }
+  100% {
+    filter: brightness(1);
+    opacity: 1;
+  }
+}
+
+@keyframes gridShift {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  50% {
+    transform: translateX(25px) translateY(25px);
+  }
+  100% {
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+}
+
+.gradient-text {
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
