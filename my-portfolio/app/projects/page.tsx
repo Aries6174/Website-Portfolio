@@ -24,6 +24,17 @@ export default function Projects() {
       technologies: ["Backend", "Database Design", "JavaScript"],
       link: "#",
     },
+    {
+      id: 3,
+      title: "Calculator",
+      year: "Basic Calculator Website",
+      description:
+        "A simple calculator web application built with modern JavaScript and responsive design principles.",
+      details:
+        "Designed with a clean UI and intuitive functionality, this calculator supports basic arithmetic operations and is fully responsive across devices.",
+      technologies: ["JavaScript", "HTML", "CSS"],
+      link: "https://aries6174.github.io/Calculator-Project/",
+    },
   ];
 
   return (
