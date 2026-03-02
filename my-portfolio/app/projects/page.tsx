@@ -3,15 +3,15 @@ import Link from "next/link";
 export default function Projects() {
   const projects = [
     {
-      id: 1,
-      title: "Balay-Balayan",
-      year: "2023 - 2024",
+      id: 3,
+      title: "Calculator",
+      year: "Basic Calculator Website",
       description:
-        "Dormitory Management System designed to streamline resident management, room assignments, and facility maintenance with an intuitive interface.",
+        "A simple calculator web application built with modern JavaScript and responsive design principles.",
       details:
-        "A comprehensive solution for dormitory administrators to manage residents, track room occupancy, handle maintenance requests, and generate reports efficiently.",
-      technologies: ["JavaScript", "Database", "Full-Stack"],
-      link: "#",
+        "Designed with a clean UI and intuitive functionality, this calculator supports basic arithmetic operations and is fully responsive across devices.",
+      technologies: ["JavaScript", "HTML", "CSS"],
+      link: "https://aries6174.github.io/Calculator-Project/",
     },
     {
       id: 2,
@@ -25,15 +25,15 @@ export default function Projects() {
       link: "#",
     },
     {
-      id: 3,
-      title: "Calculator",
-      year: "Basic Calculator Website",
+      id: 1,
+      title: "Balay-Balayan",
+      year: "2023 - 2024",
       description:
-        "A simple calculator web application built with modern JavaScript and responsive design principles.",
+        "Dormitory Management System designed to streamline resident management, room assignments, and facility maintenance with an intuitive interface.",
       details:
-        "Designed with a clean UI and intuitive functionality, this calculator supports basic arithmetic operations and is fully responsive across devices.",
-      technologies: ["JavaScript", "HTML", "CSS"],
-      link: "https://aries6174.github.io/Calculator-Project/",
+        "A comprehensive solution for dormitory administrators to manage residents, track room occupancy, handle maintenance requests, and generate reports efficiently.",
+      technologies: ["JavaScript", "Database", "Full-Stack"],
+      link: "https://balaybalayan.vercel.app/",
     },
   ];
 
